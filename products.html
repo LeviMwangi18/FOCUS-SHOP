@@ -6,6 +6,8 @@
     <title>THE SHOP</title>
     <link rel="stylesheet" href="product.css">
     <script src="https://kit.fontawesome.com/4808f76699.js" crossorigin="anonymous"></script>
+    <!-- Include SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header>
@@ -19,16 +21,28 @@
                 <a href="about.html" target="_blank">About</a>
                 <a href="products.html" target="_blank">Products</a>
                 <a href="contacts.html" target="_blank">Contacts</a>
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#" id="cartButton"><i class="fas fa-shopping-cart"></i></a>(<span id="cartCount">0</span>)
             </div>
         </div>
     </header>
     <main>
         <h1>THE SHOP</h1>
-    <div class="product-container" id="productContainer">
-        
-    </div>
+        <div class="product-container" id="productContainer"></div>
     </main>
+
+    <!-- Cart Popup -->
+    <div id="cartPopup" class="cart-popup">
+        <div class="cart-content">
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <div class="cart-buttons">
+                <button id="checkoutBtn">Checkout</button>
+                <button id="clearCartBtn">Clear Cart</button>
+                <button id="closeCartButton">Close</button>
+            </div>
+        </div>
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>
