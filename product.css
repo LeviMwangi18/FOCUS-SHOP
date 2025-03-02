@@ -49,6 +49,7 @@ main{
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .product-card h3 {
@@ -61,17 +62,7 @@ main{
     font-size: 1rem;
     color: #555;
 }
-/* Responsive Design */
-@media (max-width: 768px) {
-    .product-card {
-        width: 150px;
-    }
-}
-@media (max-width: 480px) {
-    .product-card {
-        width: 100%;
-    }
-}
+
 header{
     z-index: 999;
     position: absolute;
@@ -120,6 +111,17 @@ header .navigation .navigation-items a:before{
 header .navigation .navigation-items a:hover:before{
     width: 100%;
     background: #ff0000;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-card {
+        width: 150px;
+    }
+}
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+    }
 }
 @media( max-width: 1040px){
     header{
@@ -179,86 +181,8 @@ header .navigation .navigation-items a:hover:before{
         transition: 0.3s ease;
     }
 }
-/* Cart Popup */
-.cart-popup {
-    position: fixed;
-    top: 0;
-    right: -300px; /* Initially hidden off-screen */
-    width: 300px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: right 0.3s ease;
-    z-index: 1000;
-}
-
-.cart-popup.active {
-    right: 0; /* Slide in when active */
-}
-
-.cart-content {
-    padding: 20px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.cart-content h2 {
-    margin-bottom: 20px;
-}
-
-#cartItems {
-    flex: 1;
-    overflow-y: auto;
-    margin-bottom: 20px;
-}
-
-#cartItems div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-#cartItems button {
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.cart-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.cart-buttons button {
-    padding: 10px;
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Ensure the cart popup doesn't overlap with the header on large screens */
-@media (min-width: 1040px) {
-    .cart-popup {
-        top: 80px; /* Adjust based on header height */
-        height: calc(100% - 80px); /* Adjust height to fit below the header */
+@media (min-width: 1080px){
+    .menu-btn{
+        display: none;
     }
-}
-.add-to-cart-btn{
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #555;
-    color: #ccc;
-    font-weight: 600;
-    font-size: 15px;
-    
 }

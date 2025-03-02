@@ -28,7 +28,7 @@ function displayProducts(products) {
         productCard.classList.add("product-card");
 
         // Check if the product has a valid image
-        const productImage = product.images[0] && product.images ? product.images : "https://via.placeholder.com/200";
+        const productImage = product.images[0] && product.images ? product.images[0] : "https://via.placeholder.com/200";
 
         productCard.innerHTML = `
             <img src="${productImage}" alt="${product.title || 'No Title'}">
@@ -36,9 +36,31 @@ function displayProducts(products) {
             <p>$${product.price || 'N/A'}</p>
         `;
 
+        // Add event listener to the product image
+        const productImageElement = productCard.querySelector('img');
+        productImageElement.addEventListener('click', () => {
+            showProductDetails(product);
+        });
+
         productContainer.appendChild(productCard);
     });
 }
+// Function to show product details in a SweetAlert2 pop-up
+function showProductDetails(product) {
+    Swal.fire({
+        title: product.title || 'No Title',
+        html: `
+            <img src="${product.images[0] || 'https://via.placeholder.com/200'}" alt="${product.title || 'No Title'}" style="max-width: 100%; height: auto; border-radius: 10px;">
+            <p><strong>Price:</strong> $${product.price || 'N/A'}</p>
+            <p><strong>Description:</strong> ${product.description || 'No description available.'}</p>
+        `,
+        showCloseButton: true,
+        showCancelButton: false,
+        focusConfirm: false,
+        confirmButtonText: 'Close',
+    });
+}
+
 // Fetch and display products when the page loads
 fetchProducts();
 
