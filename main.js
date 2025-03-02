@@ -41,6 +41,5 @@ function displayProducts(products) {
         productContainer.appendChild(productCard);
     });
 }
-
 // Fetch and display products when the page loads
 fetchProducts();
