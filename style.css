@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    height: 100vh;
+    background: #fff;
+    background-size: cover;
+    min-height: 100vh;
+}
+header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+    color: #fff;
+}
+header .brand{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+header .brand:hover{
+    color: #ff0000;
+}
+header .navigation{
+    position: relative;
+}
+header .navigation .navigation-items a{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:hover:before{
+    width: 100%;
+    background: #ff0000;
+}
+.home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.home:before{
+    z-index: 777;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.home .content{
+    z-index: 888;
+    color: #fff;
+    width: 70%;
+    margin-top: 50px;
+    display: none;
+    padding: 100px 200px;
+}
+.home .content.active{
+    display: block;
+}
+.home .content h1{
+    font-size: 4em;
+    font-weight: 900;
+    margin-bottom: 40px;
+    line-height: 75px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.home .content h1 span{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.home .content p{
+    margin-bottom: 65px;
+}
+.home .content button{
+    background-color: #fff;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+.home .media-icons{
+    z-index: 888;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+.home .media-icons a{
+    color: #fff;
+    font-size: 2.5em;
+    transition: 0.3s ease;
+}
+.home .media-icons a:not(:last-child){
+    margin-bottom: 20px;
+}
+.home .media-icons a:hover{
+    transform: scale(1.2);
+    color: #ff0000;
+}
+.home video{
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider-navigation{
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    transform: translateY(80px);
+}
+.slider-navigation .nav-btn{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    transition: 0.3s ease;
+}
+.slider-navigation .nav-btn.active{
+    background: #ff0000;
+}
+.slider-navigation .nav-btn:not(:last-child){
+    margin-right: 10px;
+}
+.slider-navigation .nav-btn:hover{
+    transform: scale(1.2);
+}
+.video-slide{
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+.video-slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+header .menu-btn i{
+    font-size: 24px;
+    color: #fff;
+}
+
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 10px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-card {
+        width: 150px;
+    }
+}
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+    }
+}
+@media( max-width: 1040px){
+    header{
+        padding: 12px 20px;
+    }
+    .home{
+        padding: 100px 20px;
+    }
+    .home .media-icons{
+        right: 15px;
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(30px);
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    header .navigation .navigation-items a{
+        color: #fff;
+        font-size: 1.2em;
+        display: block;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    header .navigation .navigation-items a:before{
+        background: #222;
+        height: 5px;
+    }
+    .header .navigation.active .navigation-items{
+        background:#fff;
+        width: 600px;
+        max-width: 660px;
+        margin: 20px;
+        padding: 40px;
+        border-radius: 5px;
+        
+    }
+    .menu-btn{
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        color: #fff;
+    }
+    .menu-btn.active{
+        z-index: 999;
+        transition: 0.3s ease;
+    }
+}
+@media (max-width: 560px){
+    .home .content h1{
+        font-size: 3em;
+        line-height: 60px;
+    }
+}
+@media (min-width: 1080px){
+    .menu-btn{
+        display: none;
+    }
+}

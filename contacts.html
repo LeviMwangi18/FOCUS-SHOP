@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <!-- Include SweetAlert2 for alerts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Include Email.js for sending emails -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://kit.fontawesome.com/4808f76699.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">Focus</a>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="about.html" target="_blank">About</a>
+                <a href="products.html" target="_blank">Products</a>
+                <a href="contacts.html" target="_blank">Contacts</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+   <section>
+    <div class="contact">
+        <h1>Get in Touch</h1>
+        <form id="contactForm">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Full Name" id="name" class="item" required>
+                    <div class="error-txt">Full Name cannot be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="email" placeholder="Email" id="email" class="item" required>
+                    <div class="error-txt">Email cannot be blank</div>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Phone Number" id="phone" class="item" required>
+                    <div class="error-txt">Phone Number cannot be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Subject" id="subject" class="item" required>
+                    <div class="error-txt">Subject cannot be blank</div>
+                </div>
+            </div>
+            <div class="textarea-field field">
+                <textarea placeholder="Your Message" id="message" cols="30" rows="10" class="item" required></textarea>
+                <div class="error-txt">Message cannot be blank</div>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+   </section>
+   <!-- Footer Section -->
+   <footer class="footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>
+                Whether you're looking for casual everyday wear, sophisticated office attire, or statement pieces that turn heads, we've got you covered. Our mission is to help you look and feel your best, no matter where you’re headed.
+            </p>
+        </div>
+        <!-- Quick Links Section -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</li>
+                <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                <li><i class="fas fa-envelope"></i> info@example.com</li>
+            </ul>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2023 FOCUS. All rights reserved.</p>
+    </div>
+</footer>
+
+    <!-- Include your custom JavaScript -->
+    <script src="contact.js"></script>
+</body>
+</html>
